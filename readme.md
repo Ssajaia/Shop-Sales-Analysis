@@ -42,6 +42,7 @@ CREATE TABLE orders(
     CONSTRAINT FK_Orders_Customers FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
     CONSTRAINT FK_Orders_Products FOREIGN KEY (product_id) REFERENCES products(product_id)
 );
+```
 🚀 Quick Start
 Prerequisites
 Microsoft SQL Server (2016 or later)
@@ -250,6 +251,7 @@ ETL pipelines for automated reporting
 📝 Query Examples
 Complex Analytical Query
 sql
+```
 -- Top 5 customers per product category with ranking
 WITH CategorySpending AS (
     SELECT
@@ -266,6 +268,7 @@ WITH CategorySpending AS (
 SELECT category, customer_name, total_spent, rank_in_category
 FROM CategorySpending
 WHERE rank_in_category <= 5;
+```
 🤝 Contributing
 To extend this project:
 
@@ -281,3 +284,4 @@ Update this README with new features
 This project is intended for educational and analytical purposes. Feel free to adapt for commercial use with proper attribution.
 
 💡 Pro Tip: Use SQL Server's execution plan feature to optimize query performance as your dataset grows beyond 100,000 records.
+
